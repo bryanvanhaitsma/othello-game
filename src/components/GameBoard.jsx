@@ -9,7 +9,7 @@ function GameBoard({ rows }) {
         <div className="row">
           {row.map((cell, index) => (
             <div className="col-1">
-              {cell.color}
+              {cell !== null ? <p>{cell}</p> : <p>- </p>}
             </div>
           ))}
         </div>

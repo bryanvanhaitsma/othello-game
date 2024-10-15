@@ -1,23 +1,19 @@
 
 
 
-const CELL_STATE = {
-  default: {
-    color: 'green',
-  },
-  white: {
-    color: 'white',
-  },
-  black: {
-    color: 'black',
-  },
-}
+// const CELL_STATE = null;
 
 
 export function initialGameState() {
+  let board = Array(8).fill(null).map(() => Array(8).fill(null));
+  board[3][3] = "black";
+  board[3][4] = "white";
+  board[4][3] = "white";
+  board[4][4] = "black";
+
   return {
     chosenWord: '',
-    rows: Array(8).fill(Array(8).fill(CELL_STATE.default)),
+    rows: board,
     gameOver: false,
   }
 }
