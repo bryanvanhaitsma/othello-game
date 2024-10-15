@@ -4,12 +4,12 @@ import React from 'react';
 
 function GameBoard({ rows }) {
   return (
-    <div className="container mt-3">
-      {rows.map((row, index) => (
-        <div className="row">
-          {row.map((cell, index) => (
-            <div className="col-1">
-              {cell !== null ? <p>{cell}</p> : <p>- </p>}
+    <div className="container">
+      {rows.map((row, rowIndex) => (
+        <div key={rowIndex} className="row">
+          {row.map((cell, cellIndex) => (
+            <div key={cellIndex} className="col p-2 board-cell">
+              {cell !== null && <div className={`circle ${cell}`}></div>}
             </div>
           ))}
         </div>

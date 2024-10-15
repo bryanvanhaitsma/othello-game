@@ -1,5 +1,6 @@
 import 'bootstrap/dist/js/bootstrap.js';
-import 'bootswatch/dist/slate/bootstrap.min.css';
+import 'bootswatch/dist/darkly/bootstrap.min.css';
+import './styles/app.css';
 
 import OthelloMainComponent from './components/OthelloMainComponent';
 
