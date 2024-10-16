@@ -2,13 +2,20 @@ import React from 'react';
 
 
 
-function GameBoard({ rows }) {
+function GameBoard({ board, cellClickHandler }) {
+
+
+
   return (
     <div className="container">
-      {rows.map((row, rowIndex) => (
+      {board.map((row, rowIndex) => (
         <div key={rowIndex} className="row">
           {row.map((cell, cellIndex) => (
-            <div key={cellIndex} className="col p-2 board-cell">
+            <div
+              onClick={() => cellClickHandler(rowIndex, cellIndex)} 
+              key={cellIndex} 
+              className="col p-0 board-cell d-flex align-items-center justify-content-center"
+            >
               {cell !== null && <div className={`circle ${cell}`}></div>}
             </div>
           ))}

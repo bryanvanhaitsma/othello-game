@@ -12,8 +12,8 @@ export function initialGameState() {
   board[4][4] = "black";
 
   return {
-    chosenWord: '',
-    rows: board,
+    nextTurn: "black",
+    board: board,
     gameOver: false,
   }
 }
